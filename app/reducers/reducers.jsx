@@ -19,7 +19,7 @@ export var showCompletedReducer = (state = false, action) => {
   }
 };
 
-export var addTodoReducer = (state = [], action) => {
+export var todoReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [
@@ -38,9 +38,11 @@ export var addTodoReducer = (state = [], action) => {
           var nextCompleted = !todo.completed;
 
           return {
-            ...todo,
+            id: todo.id,
+            text: todo.text,
+            createdAt: todo.createdAt,
             completed: nextCompleted,
-            completedAt: completed ? moment().unix() : undefined
+            completedAt: nextCompleted ? moment().unix() : undefined
           };
         }
       });
