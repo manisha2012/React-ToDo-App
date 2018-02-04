@@ -7,7 +7,7 @@ export var ToDo = React.createClass({
   toggleTodo: function () {
     var {text, id, completed, dispatch} = this.props;
     //this.props.onToggle(id);
-    dispatch(actions.toggleTodo(id));
+    dispatch(actions.startToggleTodo(id, !completed));
   },
   render: function () {
     var {text, id, completed, createdAt, completedAt} = this.props;
