@@ -6,7 +6,7 @@ var expect = require('expect');
 var $ = require('jquery');
 
 var configureStore = require('configureStore');
-var ToDoApp = require('ToDoApp');
+import ToDoApp from 'ToDoApp';
 import ToDoList from 'ToDoList'
 
 describe('ToDoApp', () => {
